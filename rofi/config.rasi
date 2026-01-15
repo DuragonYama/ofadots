@@ -1,0 +1,8 @@
+@theme "~/.config/rofi/red-dark.rasi"
+
+configuration {
+    modi: "drun,run,ofa:~/.config/rofi/ofa-mode.sh";
+    show-icons: true;
+    combi-modi: "drun,ofa";
+    combi-hide-mode-prefix: true;
+}

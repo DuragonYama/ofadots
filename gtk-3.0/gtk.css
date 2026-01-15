@@ -1,0 +1,18 @@
+/* Red accent overrides */
+@define-color accent_bg_color #d32f2f;
+@define-color accent_color #d32f2f;
+
+/* Selection colors */
+*:selected {
+    background-color: #d32f2f;
+}
+
+/* Buttons when checked/active */
+button:checked, button:active {
+    background-color: #d32f2f;
+}
+
+/* Switches */
+switch:checked {
+    background-color: #d32f2f;
+}

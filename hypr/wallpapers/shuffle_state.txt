@@ -1,5 +1,2 @@
 /home/omer/.config/hypr/wallpapers/wallhaven-5dv677_1920x1080.png
-/home/omer/.config/hypr/wallpapers/wallhaven-483l1o_1920x1080.png
-/home/omer/.config/hypr/wallpapers/wallhaven-2ek92m_1920x1080.png
-/home/omer/.config/hypr/wallpapers/wallhaven-4y8mdd_1920x1080.png
-/home/omer/.config/hypr/wallpapers/wallhaven-83g6zy_1920x1080.png
+/home/omer/.config/hypr/wallpapers/wallhaven-6qkpox_1920x1080.png

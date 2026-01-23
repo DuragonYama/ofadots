@@ -1,0 +1,295 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* Workspace pill - compact */
+#workspaces {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #444444;
+    border-radius: 12px;
+    padding: 0 8px;
+    margin: 4px 4px 4px 10px;
+    /* box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3); */
+}
+
+/* Updates module - Pacman style */
+#custom-updates {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #444444;
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 4px 4px 4px 4px;
+    color: #ffff00;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+}
+
+/* AUR updates module - Different color */
+#custom-aur-updates {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #444444;
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 4px 4px 4px 4px;
+    color: #00aaff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+}
+
+/* VPN status module */
+#custom-vpn {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #444444;
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 4px 4px 4px 4px;
+    color: #666666;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+}
+
+/* VPN connected - red */
+#custom-vpn.connected {
+    color: #ff0000;
+    border-color: #ff0000;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+}
+
+/* Clipboard module */
+#custom-clipboard {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #444444;
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 4px 4px 4px 4px;
+    color: #ff88ff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    color: #b0b0b0;
+    background: transparent;
+    border-radius: 8px;
+    margin: 2px;
+    font-size: 15px;
+    transition: ease-in-out 0.3s;
+}
+
+#workspaces button.active {
+    color: #ff0000;
+    background: rgba(255, 0, 0, 0.15);
+    text-shadow: 0 0 8px #ff0000;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff5555;
+}
+
+/* Clock pill - center - BRIGHT RED - compact */
+#clock {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #ff0000;
+    border-radius: 12px;
+    padding: 0 18px;
+    margin: 4px;
+    color: #ff0000;
+    font-size: 17px;
+    font-weight: 900;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    /* box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3); */
+}
+
+/* CPU - 3 stage speedometer */
+#cpu {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #444444;
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 4px 2px;
+    min-width: 60px;
+    color: #00fafa;;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+#cpu.low {
+    color: #00fafa;
+    border-color: #444444;
+}
+
+#cpu.medium {
+    color: #ffaa00;
+    border-color: #665500;
+}
+
+#cpu.high {
+    color: #ff4444;
+    border-color: #662222;
+}
+
+/* Temperature - simple with critical alert */
+#temperature {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #444444;
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 4px 2px;
+    min-width: 70px;
+    color: #ffaa00;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+}
+
+#temperature.critical {
+    color: #ff0000;
+    border-color: #ff0000;
+    animation: blink 0.5s linear infinite;
+}
+
+/* Memory */
+#memory {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #444444;
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 4px 2px;
+    min-width: 60px;
+    color: #00ef80;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+}
+
+/* Disk */
+#disk {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #444444;
+    border-radius: 12px;
+    padding: 0 5px;
+    margin: 4px 2px;
+    min-width: 55px;
+    color: #aa88ff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+}
+
+/* Custom Network pill with power save indicator */
+#custom-network {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #444444;
+    border-radius: 12px;
+    padding: 0 5px;
+    padding-right: 10px;
+    margin: 4px 2px;
+    min-width: 35px;
+    color: #00aaff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+#custom-network.disconnected {
+    color: #ff0000;
+    border-color: #ff0000;
+}
+
+/* Performance mode - red border + glow */
+#custom-network.performance {
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+/* Audio pill */
+#wireplumber {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #444444;
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 4px 2px;
+    min-width: 65px;
+    color: #ffff00;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+}
+
+#wireplumber.muted {
+    color: #666666;
+}
+
+/* Bluetooth pill */
+#bluetooth {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #00aaff;
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 4px 2px;
+    min-width: 45px;
+    color: #00aaff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+}
+
+#bluetooth.disabled {
+    color: #666666;
+    border: 2px solid #444444;
+}
+
+#bluetooth.connected {
+    color: #00dd76;
+    border: 2px solid #00dd76;
+}
+
+/* Battery pill */
+#battery {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #444444;
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 4px 10px 4px 2px;
+    min-width: 65px;
+    color: #00ff00;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+}
+
+#battery.charging {
+    color: #00ff00;
+    border-color: #00ff00;
+    /* box-shadow: 0 0 10px rgba(0, 255, 0, 0.3); */
+}
+
+#battery.warning:not(.charging) {
+    color: #ff9800;
+    border-color: #ff9800;
+}
+
+#battery.critical:not(.charging) {
+    color: #ff0000;
+    border-color: #ff0000;
+    animation: blink 0.5s linear infinite;
+}
+
+/* Tray pill */
+#tray {
+    background: rgba(10, 10, 10, 0.95);
+    border: 2px solid #444444;
+    border-radius: 12px;
+    padding: 0 8px;
+    margin: 4px 10px 4px 2px;
+}
+
+@keyframes blink {
+    50% { opacity: 0.4; }
+}

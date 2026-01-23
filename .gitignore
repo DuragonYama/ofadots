@@ -1,0 +1,23 @@
+# Temporary files
+*.swp
+*.swo
+*~
+.DS_Store
+
+# State files (should not be synced)
+hypr/wallpapers/shuffle_state.txt
+waybar/clipboard-pins.txt
+
+# Cache and runtime
+*.cache
+*.log
+__pycache__/
+
+# Personal data
+.env
+credentials.json
+
+# IDE/Editor
+.vscode/
+.idea/
+*.code-workspace

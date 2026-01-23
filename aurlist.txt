@@ -1,0 +1,4 @@
+grimblast-git
+papirus-folders
+whitesur-cursor-theme-git
+yay

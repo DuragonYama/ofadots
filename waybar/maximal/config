@@ -1,0 +1,140 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 10,
+    
+    "modules-left": ["hyprland/workspaces", "custom/updates", "custom/aur-updates", "disk", "custom/vpn", "custom/clipboard"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "temperature", "memory", "custom/network", "wireplumber", "bluetooth", "battery"],
+    
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "on-click": "activate",
+        "persistent-workspaces": {
+            "*": 6
+        }
+    },
+
+    "custom/updates": {
+        "format": "󰮯 {}",
+        "interval": 3600,
+        "exec": "~/.config/waybar/scripts/waybar-updates.sh",
+        "exec-if": "exit 0",
+        "on-click": "~/.config/waybar/scripts/run-updates.sh",
+        "return-type": "json",
+        "signal": 8,
+        "tooltip": true
+    },
+
+    "custom/aur-updates": {
+        "format": "󰣇 {}",
+        "interval": 3600,
+        "exec": "~/.config/waybar/scripts/waybar-aur-updates.sh",
+        "exec-if": "exit 0",
+        "on-click": "~/.config/waybar/scripts/run-updates.sh",
+        "return-type": "json",
+        "signal": 9,
+        "tooltip": true
+    },
+
+    "custom/vpn": {
+        "format": "󰖂 {}",
+        "interval": 5,
+        "exec": "~/.config/waybar/scripts/vpn-status.sh",
+        "return-type": "json",
+        "tooltip": true
+    },
+
+    "custom/clipboard": {
+        "format": "󰅇 {}",
+        "interval": 1,
+        "exec": "~/.config/waybar/scripts/clipboard-status.sh",
+        "on-click": "~/.config/waybar/scripts/clipboard-picker.sh",
+        "return-type": "json",
+        "tooltip": true
+    },
+    
+  "clock": {
+    "interval": 60,
+    "format": "{:%H:%M}",
+    "format-alt": "{:%m/%d}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "format": {
+        "months": "<span color='#ff0000'><b>{}</b></span>",
+        "days": "<span color='#ffffff'><b>{}</b></span>",
+        "today": "<span color='#ff0000'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+    
+    "cpu": {
+        "format": "{icon} {usage}%",
+        "format-icons": ["󰾆", "󰾅", "󰓅"],
+        "tooltip-format": "CPU Usage: {usage}%\n{load}",
+        "interval": 2,
+        "states": {
+            "low": 49,
+            "medium": 70,
+            "high": 100
+        }
+    },
+    
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+        "critical-threshold": 80,
+        "format": "󰔏 {temperatureC}°C",
+        "format-critical": "󰔏 {temperatureC}°C",
+        "tooltip-format": "CPU Temperature: {temperatureC}°C"
+    },
+    
+    "memory": {
+        "format": "󰍛 {}%",
+        "tooltip-format": "RAM: {used:0.1f}G / {total:0.1f}G"
+    },
+    
+    "disk": {
+        "interval": 30,
+        "format": "󰋊 {percentage_used}%",
+        "path": "/",
+        "tooltip-format": "Used: {used} / {total}"
+    },
+    
+    "custom/network": {
+        "exec": "~/.config/waybar/scripts/network-with-power.sh",
+        "return-type": "json",
+        "interval": 2,
+        "on-click": "nm-connection-editor"
+    },
+    
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰸈 {volume}%",
+        "format-icons": ["󰕿", "󰖀", "󰕾"],
+        "on-click": "pavucontrol"
+    },
+
+    "bluetooth": {
+        "format": "󰂯",
+        "format-connected": "󰂯 {num_connections}",
+        "format-disabled": "󰂲",
+        "tooltip-format": "{controller_alias}\t{controller_address}\nStatus: {status}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "~/.config/waybar/scripts/bluetooth-toggle.sh",
+        "on-click-right": "blueman-manager"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    }
+}

@@ -1,4 +1,13 @@
+android-studio
+antigravity
+arduino-ide-bin
+flutter
 grimblast-git
+opencode-bin
 papirus-folders
+stripe-cli
+ungoogled-chromium-bin
+visual-studio-code-bin
 whitesur-cursor-theme-git
 yay
+zen-browser-bin

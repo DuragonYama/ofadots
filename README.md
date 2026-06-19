@@ -21,8 +21,8 @@ chmod +x install.sh
 ```
 
 The installer will prompt you to choose:
-1. **Minimal** - 21 packages (only what's needed for configs to work)
-2. **Full** - 51 packages (minimal + productivity tools)
+1. **Minimal** - 22 packages (only what's needed for configs to work)
+2. **Full** - 105 packages (minimal + productivity tools)
 3. **Skip** - Only copy configs
 
 ## Screenshots
@@ -44,6 +44,7 @@ The installer will prompt you to choose:
 - `waybar/` - Status bar with multiple themes (minimal/maximal)
 - `rofi/` - App launcher with OFA custom mode
 - `kitty/` - Terminal emulator
+- `nvim/` - Neovim (LazyVim) configuration
 - `mako/` - Notifications
 - `ofa/` - Custom scripts and commands
 - `gtk-3.0/`, `gtk-4.0/` - GTK theme settings
@@ -67,13 +68,13 @@ See `hypr/hyprland.conf` for full list.
 
 Two installation modes are available:
 
-- **Minimal** (`pkglist-minimal.txt`, `aurlist-minimal.txt`) - 21 packages
+- **Minimal** (`pkglist-minimal.txt`, `aurlist-minimal.txt`) - 22 packages
   - Only packages explicitly used in configs
   - Perfect for testing or lightweight systems
 
-- **Full** (`pkglist.txt`, `aurlist.txt`) - 51 packages
-  - Everything in minimal + productivity tools
-  - Includes: git, docker, neovim, htop, tailscale, etc.
+- **Full** (`pkglist.txt`, `aurlist.txt`) - 105 packages
+  - Everything in minimal + productivity, dev, and daily-driver tools
+  - Includes: git, docker, neovim, lazygit, tmux, tailscale, dev toolchains (bun, dotnet, jdk, flutter, android-studio), browsers, libreoffice, etc.
 
 See [PACKAGES.md](PACKAGES.md) for detailed package lists.
 

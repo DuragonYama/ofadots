@@ -4,6 +4,7 @@ hyprland
 kitty
 libnotify
 mako
+neovim
 networkmanager
 pipewire-alsa
 pipewire-pulse

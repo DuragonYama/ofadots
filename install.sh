@@ -25,7 +25,7 @@ fi
 echo ""
 echo "Choose installation type:"
 echo "1) Minimal  - Only packages needed for configs to work (22 packages)"
-echo "2) Full     - Minimal + productivity tools (105 packages)"
+echo "2) Full     - Minimal + productivity tools (106 packages)"
 echo "3) Skip package installation (only copy configs)"
 echo ""
 read -p "Enter choice [1-3]: " choice
@@ -66,6 +66,9 @@ cp -r waybar ~/.config/
 cp -r rofi ~/.config/
 cp -r kitty ~/.config/
 cp -r nvim ~/.config/
+cp -r yazi ~/.config/
+cp -r lazygit ~/.config/
+cp -r glow ~/.config/
 cp -r gtk-3.0 ~/.config/
 cp -r gtk-4.0 ~/.config/
 cp -r ofa ~/.config/

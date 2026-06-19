@@ -1,0 +1,5 @@
+[mgr]
+prepend_keymap = [
+  { on = ["g", "z"], run = "shell 'lazygit' --block", desc = "Open Lazygit" },
+  { on = ["y", "p"], run = "shell 'echo -n %h | xclip -selection clipboard'", desc = "Copy absolute path to clipboard" },
+]

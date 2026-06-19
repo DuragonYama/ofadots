@@ -1,0 +1,75 @@
+[manager]
+cwd = { fg = "cyan", bold = true }
+
+hovered         = { fg = "black", bg = "blue",    bold = true }
+preview_hovered = { underline = true }
+
+find_keyword  = { fg = "yellow", bold = true, italic = true, underline = true }
+find_position = { fg = "magenta", bold = true }
+
+marker_copied  = { fg = "yellow", bg = "yellow" }
+marker_cut     = { fg = "red",    bg = "red" }
+marker_marked  = { fg = "magenta", bg = "magenta" }
+marker_selected = { fg = "blue",  bg = "blue" }
+
+tab_active   = { fg = "black", bg = "blue" }
+tab_inactive = { fg = "white", bg = "darkgray" }
+
+border_style = { fg = "blue" }
+
+[status]
+separator_open  = ""
+separator_close = ""
+separator_style = { fg = "darkgray" }
+
+mode_normal = { fg = "black", bg = "blue",    bold = true }
+mode_select = { fg = "black", bg = "yellow",  bold = true }
+mode_unset  = { fg = "black", bg = "magenta", bold = true }
+
+permissions_t = { fg = "green" }
+permissions_r = { fg = "yellow" }
+permissions_w = { fg = "red" }
+permissions_x = { fg = "cyan" }
+permissions_s = { fg = "darkgray" }
+
+[input]
+border   = { fg = "blue" }
+title    = { fg = "blue" }
+value    = { fg = "white" }
+selected = { reversed = true }
+
+[select]
+border   = { fg = "blue" }
+active   = { fg = "blue", bold = true }
+inactive = {}
+
+[tasks]
+border  = { fg = "blue" }
+title   = {}
+hovered = { underline = true }
+
+[which]
+mask            = { bg = "black" }
+cand            = { fg = "blue" }
+rest            = { fg = "darkgray" }
+desc            = { fg = "white" }
+separator       = "  "
+separator_style = { fg = "darkgray" }
+
+[notify]
+title_info  = { fg = "blue" }
+title_warn  = { fg = "yellow" }
+title_error = { fg = "red" }
+
+[filetype]
+rules = [
+  { mime = "image/*",             fg = "yellow"  },
+  { mime = "video/*",             fg = "magenta" },
+  { mime = "audio/*",             fg = "magenta" },
+  { mime = "application/zip",     fg = "red"     },
+  { mime = "application/gzip",    fg = "red"     },
+  { mime = "application/x-tar",   fg = "red"     },
+  { mime = "application/x-bzip2", fg = "red"     },
+  { mime = "application/x-xz",   fg = "red"     },
+  { mime = "text/*",              fg = "white"   },
+]

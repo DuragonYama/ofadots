@@ -24,6 +24,7 @@ fprintd
 gemini-cli
 ghostscript
 git
+glow
 gnome-disk-utility
 grim
 htop

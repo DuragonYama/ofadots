@@ -13,7 +13,7 @@ chmod +x install.sh
 
 The script will ask you to choose:
 1. **Minimal** - Only packages needed for configs to work (22 packages)
-2. **Full** - Minimal + productivity tools (105 packages)
+2. **Full** - Minimal + productivity tools (106 packages)
 3. **Skip** - Only copy configs (if you already have packages)
 
 ## Installation Options Explained
@@ -37,13 +37,13 @@ This includes ONLY packages that are:
 - Audio/Network: `pipewire-pulse`, `pipewire-alsa`, `wireplumber`, `networkmanager`
 - Theme: `whitesur-cursor-theme-git`
 
-### Full (92 official + 13 AUR = 105 packages)
+### Full (93 official + 13 AUR = 106 packages)
 
 **For personal setup with additional productivity, dev, and daily-driver tools.**
 
 Everything in minimal PLUS:
 - **Editors:** nano, neovim, mousepad, featherpad
-- **CLI/Terminal:** tmux, lazygit, yazi, tree, less, plocate, fastfetch
+- **CLI/Terminal:** tmux, lazygit, yazi, glow, tree, less, plocate, fastfetch
 - **File tools:** 7zip, unzip, imagemagick, imv, dosfstools, ntfs-3g, ghostscript
 - **Dev tools:** git, docker, docker-compose, postgresql, ollama, gemini-cli, sqlitebrowser, python-pypdf
 - **Dev toolchains:** bun, nvm, jdk21-openjdk, dotnet-sdk, aspnet-runtime, aspnet-targeting-pack
@@ -75,7 +75,7 @@ yay -S --needed - < aurlist.txt
 
 Then copy configs manually:
 ```bash
-cp -r hypr waybar rofi kitty nvim gtk-3.0 gtk-4.0 ofa mako ~/.config/
+cp -r hypr waybar rofi kitty nvim yazi lazygit glow gtk-3.0 gtk-4.0 ofa mako ~/.config/
 cp .gitconfig ~/
 cp mimeapps.list ~/.config/
 ```

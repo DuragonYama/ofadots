@@ -1,0 +1,18 @@
+[preview]
+wrap     = "no"
+tab_size = 2
+
+[manager]
+show_hidden = true
+sort_by = "natural"
+sort_sensitive = false
+
+[opener]
+edit = [
+  { run = '$EDITOR "$@"', block = true },
+]
+
+[open]
+rules = [
+  { mime = "*", use = ["edit"] },
+]

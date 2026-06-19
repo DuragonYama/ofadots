@@ -22,7 +22,7 @@ chmod +x install.sh
 
 The installer will prompt you to choose:
 1. **Minimal** - 22 packages (only what's needed for configs to work)
-2. **Full** - 105 packages (minimal + productivity tools)
+2. **Full** - 106 packages (minimal + productivity + daily-driver tools)
 3. **Skip** - Only copy configs
 
 ## Screenshots
@@ -45,6 +45,9 @@ The installer will prompt you to choose:
 - `rofi/` - App launcher with OFA custom mode
 - `kitty/` - Terminal emulator
 - `nvim/` - Neovim (LazyVim) configuration
+- `yazi/` - Terminal file manager (incl. glow markdown-preview plugin)
+- `lazygit/` - Git TUI
+- `glow/` - Markdown renderer (used by yazi preview)
 - `mako/` - Notifications
 - `ofa/` - Custom scripts and commands
 - `gtk-3.0/`, `gtk-4.0/` - GTK theme settings
@@ -72,7 +75,7 @@ Two installation modes are available:
   - Only packages explicitly used in configs
   - Perfect for testing or lightweight systems
 
-- **Full** (`pkglist.txt`, `aurlist.txt`) - 105 packages
+- **Full** (`pkglist.txt`, `aurlist.txt`) - 106 packages
   - Everything in minimal + productivity, dev, and daily-driver tools
   - Includes: git, docker, neovim, lazygit, tmux, tailscale, dev toolchains (bun, dotnet, jdk, flutter, android-studio), browsers, libreoffice, etc.
 
